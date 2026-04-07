@@ -2,7 +2,7 @@ let mercadoria = {};
 let endereco = {};
 let vinculo = {};
 
-// LOGIN
+// LOGIN -- tela incial de apresentação
 function login() {
   let senha = document.getElementById("senha").value;
 
