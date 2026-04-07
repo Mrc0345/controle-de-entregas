@@ -2,7 +2,7 @@ let mercadoria = {};
 let endereco = {};
 let vinculo = {};
 
-// LOGIN -- tela incial de apresentação
+// LOGIN -- tela inicial de apresentação
 function login() {
   let senha = document.getElementById("senha").value;
 
@@ -14,7 +14,7 @@ function login() {
   }
 }
 
-// CADASTRO MERCADORIA
+// CADASTRO MERCADORIA -- tela inicial de mercadoria
 function cadastrarMercadoria() {
   mercadoria = {
     nome: document.getElementById("nome").value,
