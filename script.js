@@ -55,3 +55,49 @@ function vincular() {
 
   document.getElementById("resultado").textContent = JSON.stringify(vinculo, null, 2);
 }
+// Arrays para armazenar mercadorias e endereços
+let mercadorias = JSON.parse(localStorage.getItem("mercadorias")) || [];
+let enderecos = JSON.parse(localStorage.getItem("enderecos")) || [];
+
+// Função para salvar no LocalStorage
+function salvarJSON() {
+    localStorage.setItem("mercadorias", JSON.stringify(mercadorias));
+    localStorage.setItem("enderecos", JSON.stringify(enderecos));
+}
+
+// Cadastro de mercadoria
+function cadastrarMercadoria(nome, quantidade, peso, preco, categoria) {
+    let produto = { nome, quantidade, peso, preco, categoria };
+    mercadorias.push(produto);
+    salvarJSON();
+    alert("Mercadoria cadastrada!");
+}
+
+// Cadastro de endereço
+function cadastrarEndereco(logradouro, complemento, numero, cep, cidade, estado) {
+    let endereco = { logradouro, complemento, numero, cep, cidade, estado };
+    enderecos.push(endereco);
+    salvarJSON();
+    alert("Endereço cadastrado!");
+}
+
+// Vinculação 1:1 entre mercadoria e endereço
+function vincularProdutoEndereco(produtoIndex, enderecoIndex) {
+    if (!mercadorias[produtoIndex].endereco && !enderecos[enderecoIndex].produto) {
+        mercadorias[produtoIndex].endereco = enderecos[enderecoIndex];
+        enderecos[enderecoIndex].produto = mercadorias[produtoIndex];
+        salvarJSON();
+        alert("Vinculação realizada com sucesso!");
+    } else {
+        alert("Erro: Mercadoria ou endereço já estão vinculados!");
+    }
+}
+
+// Exemplo de listagem (para testar)
+function listarMercadorias() {
+    console.log("Mercadorias:", mercadorias);
+}
+
+function listarEnderecos() {
+    console.log("Endereços:", enderecos);
+}

@@ -1,0 +1,17 @@
+[33mcommit cb0d1ddd866c7604f68e167687dce0c49fef99b3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mrelease-dev[m[33m)[m
+Author: mrc0345 <marcusviniciusor09@gmail.com>
+Date:   Mon Apr 6 21:56:38 2026 -0300
+
+    cadastro de mercadoria
+
+[33mcommit bf80fa44399a1ff1a1897f538357bbb479d90510[m
+Author: mrc0345 <marcusviniciusor09@gmail.com>
+Date:   Mon Apr 6 21:55:30 2026 -0300
+
+    tela de login
+
+[33mcommit d7ed72c7d314861e64ad1c43a656c00b1eaca16a[m
+Author: mrc0345 <marcusviniciusor09@gmail.com>
+Date:   Mon Apr 6 21:54:12 2026 -0300
+
+    estrutura inicial
